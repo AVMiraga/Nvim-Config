@@ -21,4 +21,9 @@ end)
 map("n", "<F12>", function()
   require("dap").step_out()
 end)
+map("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
+map("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+map("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
+map("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+map("n", "<leader>nd", '<cmd> lua require("notify").dismiss({pending = true, silent = true})<CR>')
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

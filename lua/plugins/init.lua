@@ -1,8 +1,9 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
+    cmd = "ConformInfo",
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -14,8 +15,8 @@ return {
   },
 
   {
-    "onsails/lspkind.nvim"
-  }
+    "onsails/lspkind.nvim",
+  },
 
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",

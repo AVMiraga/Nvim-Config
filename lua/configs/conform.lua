@@ -1,9 +1,21 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    css = { "prettierd" },
+    html = { "prettierd" },
+    htmlangular = { "prettierd" },
     cpp = { "my_formatter" },
+    javascript = { "prettierd" },
+    javascriptreact = { "prettierd" },
+    typescript = { "prettierd" },
+    typescriptreact = { "prettierd" },
+    json = { "prettierd" },
+    jsonc = { "prettierd" },
+    scss = { "prettierd" },
+    vue = { "prettierd" },
+    fish = { "fish_indent" },
+    sh = { "shfmt", "shellharden" },
+    bash = { "shfmt", "shellharden" },
   },
 
   formatters = {
@@ -12,6 +24,15 @@ local options = {
       args = { "--style=google" },
       stdin = true,
     },
+    shfmt = {
+      prepend_args = { "-i", "2" },
+    },
+    shellharden = {
+      prepend_args = { "--transform" },
+    },
+    -- cbfmt = {
+    --   prepend_args = { "--config", os.getenv "HOME" .. "/.config/cbfmt/cbfmt.toml" },
+    -- },
   },
 
   format_on_save = {
@@ -19,6 +40,8 @@ local options = {
     timeout_ms = 500,
     lsp_fallback = true,
   },
+
+  notify_on_error = false,
 }
 
 return options

@@ -30,6 +30,11 @@ local plugins = {
     end,
   },
   {
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
+    build = "make install_jsregexp",
+  },
+  {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
@@ -135,6 +140,8 @@ local plugins = {
         ["<C-b>"] = cmp.mapping.scroll_docs(-5),
         ["<C-f>"] = cmp.mapping.scroll_docs(5),
         ["<C-q>"] = cmp.mapping.abort(),
+        ["<CR>"] = cmp.config.disable,
+        ["<Tab>"] = cmp.config.disable,
       },
       -- mapping = {
       --   ["<CR>"] = cmp.config.disable,
